@@ -7,7 +7,6 @@ import pytz
 # from tkinter import *
 
 class Supplier:
-    # TODO add mutliple Sipp code
     def __init__(self, _name):
         self._name = _name
         self._sippCodes = list()
@@ -39,7 +38,6 @@ class Supplier:
 
 
 class Country:
-    # TODO add multiple stations , and multiple sup , and add multiple mutliple station to sup
     def __init__(self, name, currency):
         self._name = name
         self._currency = currency
@@ -233,16 +231,11 @@ class Data:
         return country.getSupplierFromName(str1)
 
 
-# TODO Menu of suppliers when Suppliers is chosen-> sets 3 lists ->sipp codes list, list of PUStations,list of DOstations
-# TODO data dict (layers Country, Supplier, pickUp, dropOFF, Sipp, tupOFDays(Sippcodes)
-# TODO set value in dict
-# TODO add values to dict
 class RunGUI:
 
     @staticmethod
     def start():
         # all buttons functions which are not in classes
-        # TODO : edit this get data should read from file
         def run():
             str1 = mainWindowPickupStationChosentextvar.get()
             str2 = mainWindowDropoffStationChosentextvar.get()
@@ -358,7 +351,6 @@ class RunGUI:
                 mainWindowDropOffBoxList.delete(0, tkinter.END)
             for station in couSupStaList:
                 mainWindowDropOffBoxList.insert(tkinter.END, station)
-            # TODO add Sippcodes
 
         mainWindow = tkinter.Tk()
         mainWindow.title("National One Way Calculator")
